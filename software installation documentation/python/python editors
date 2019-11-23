@@ -1,1 +1,12 @@
-editors
+installing all package in one file:
+----------------------------------
+create package list file  (ex :requirements.txtit containts all packages names)
+and run in CLI >  pip install -r requirements.txt
+
+install in spyder:
+------------------
+To install spyder editor>> pip install spyder 
+To active spyder editor >> python -m spyder.app.start
+TO open spyder >> spyder3 
+
+
