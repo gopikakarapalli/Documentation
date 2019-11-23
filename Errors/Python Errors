@@ -1,1 +1,16 @@
+installing packages in python :-
+
+pip install <packages_Name> (or)
+python -m pip install --upgrade <packages_Name>
+pip install --ignore <package_Name> (or)
+pip install --ignore-installed <package_Name> (or)
+pip install  <package_Name> --upgrade --ignore-installed (or)
+python -m pip install --upgrade pip install -U --ignore-installed --upgrade <package_Name> 
+
+
+tensorflow package installation error : tensor not importing
+solution : python -m pip install --upgrade pip install -U --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl
+sorflow-1.12.0-py3-none-any.whl
+
+
 
