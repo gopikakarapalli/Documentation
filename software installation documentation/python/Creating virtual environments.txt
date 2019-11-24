@@ -1,0 +1,51 @@
+#Creating virtual environments:
+--------------------------------
+step1: install virtualenv environments packages
+   	> pip install virtualrnv
+step2: creat new environments dir (all project environments are created hear )
+	>mkdir <environments_dir_name>
+step3: go to environments dir 
+	> cd <environments dir path>
+step4: install setuptools and pip in your project virtualenv environments
+        > virtualenv <project_environments_name>  (all packages are install in this dir)
+			(or)
+	> virtualenv -p <required python > <project_environments_name> ------ >Mac & Linux
+	  Ex: virtualenv -p /user/bin/python2.6 py37_env	
+	>python -m venv <project_environments_name>------->windows
+	>python -m venv <project_environments_name> --system-site-packages -->to virtualenv environments in system-site-packages dir
+
+
+
+step5:to To activate your virtualenv environments(it changes your python system cwd)
+	> source <project_environments_name>/bin/activate -->Mac & Linux
+	> <project_name>\Scripts\activate.bat   ------->windows 
+
+step6: To deactivate your virtualenv environments
+	> deactivate
+step7: To remove virtualenv environments
+	>rm -rf <project_environments_name>
+
+Note:
+ * To check python,pip and paths
+	 > which python;which pip
+	>where ptython -->windows
+ * TO show local packages: 
+	> pip list; > pip freeze 
+ * To install packages in virtualenv environments
+	> pip install <packages_name>
+ * To export all required packages name in one file 
+	> pip freeze --local > requirements.txt
+
+ 
+
+
+# Manage Multiple Projects, Virtual Environments, and Environment Variables:
+---------------------------------------------------------------------------------
+
+
+
+	
+ 
+
+
+
