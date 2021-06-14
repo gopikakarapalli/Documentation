@@ -1,0 +1,26 @@
+error: Unable to find vcvarsall.bat problem:
+--------------------------------------------
+      link:https://www.programmersought.com/article/77372167396/
+      
+Use python36 execution of setup python generation expansion module when it came to these problems, because there is no vcvarsall.bat found. Find vcvarsall.bat method is defined in the _msvccompiler.py file (note the front of the file is underlined!), Such as my local (conda virtual environment) file path is "D: \ ProgramData \ Anaconda3 \ envs \ xxxx \ Lib \ distutils \ _msvccompiler.py "
+
+Open the file, modify the function _find_vcvarsall. I is locally installed vs2017, vcvarsall.bat path as "D: \ Program Files (x86) \ Microsoft Visual Studio \ 2017 \ Community \ VC \ Auxiliary \ Build \ vcvarsall.bat"
+
+_find_vcvarsall of reads as follows:
+
+
+change into:
+
+def _find_vcvarsall(plat_spec):
+        best_dir = r'D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build'
+        best_version = 17
+        vcruntime = None
+        vcruntime_spec = _VCVARS_PLAT_TO_VCRUNTIME_REDIST.get(plat_spec)
+        if vcruntime_spec:
+            vcruntime = os.path.join(best_dir,
+                vcruntime_spec.format(best_version))
+            if not os.path.isfile(vcruntime):
+                log.debug("%s cannot be found", vcruntime)
+                vcruntime = None
+        print(vcruntime)
+        return r'D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat', vcruntime
